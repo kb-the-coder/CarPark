@@ -2,7 +2,10 @@ import mongoose from "mongoose";
 
 const ParkingSlotSchema = mongoose.Schema({
     slotnumber:{type:String,required:true},
-    slotstatus:{type:String,enum:["available","taken","damaged"],default:"available"}
+    slotstatus:{
+    type:String,enum:["available","taken","damaged"],
+    default:"available"
+    }
 },{
     timestamps:true
 })

@@ -4,6 +4,9 @@ import db_conn from './config/db.js';
 import 'dotenv/config'
 import { userRoute } from './Route/UserRoute.js';
 import { carRoute } from './Route/CarRoute.js';
+import { parkSlotRoute } from './Route/ParkSlotRoute.js';
+import { parkRecRoute } from './Route/ParkRecRoute.js';
+import { paymentRoute } from './Route/PaymentRoute.js';
 
 // Database Connection Function
 db_conn();
@@ -35,3 +38,12 @@ app.use("/api",userRoute)
 
 // Car Route API
 app.use("/api/car",carRoute)
+
+// ParkSlot Route Api
+app.use("/api/slot",parkSlotRoute)
+
+// ParkRec Route Api
+app.use("/api/parkrec",parkRecRoute)
+
+// Payment Route Api
+app.use("/api/payment",paymentRoute)

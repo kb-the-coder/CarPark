@@ -19,6 +19,7 @@ export const insert = async(req,res)=>{
     }
 }
 
+
 export const select = async (req,res) => {
     try {
         const cars = await Car.find()
